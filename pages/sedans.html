@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Car-rental</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__bcgr">
+        <div class="container">
+          <nav class="top-nav">
+            <div class="top-nav__left">
+              <a class="top-nav__link" href="rassrochka.html">Рассрочка</a>
+            </div>
+            <button class="top-nav__button">Забронировать автомобиль</button>
+            <div class="modal-bg">
+              <div class="modal">
+                <div class="modal__inner">
+                  <h4 class="modal__title">Обратная связь</h4>
+                  <img
+                    class="modal__close"
+                    src="../img/modal-close.png"
+                    alt="Закрыть"
+                  />
+                </div>
+                <div class="modal__body">
+                  <input
+                    class="modal__input-row"
+                    type="text"
+                    placeholder="Фамилия, имя"
+                  />
+                  <div class="modal__input-wrap">
+                    <input
+                      class="modal__input-row2"
+                      placeholder="Телефон"
+                      type="text"
+                    />
+                    <input
+                      class="modal__input-row2"
+                      placeholder="E-mail(необязательно)"
+                      type="text"
+                    />
+                  </div>
+                  <button class="modal__send" type="submit">Отправить</button>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="main-header">
+        <div class="container">
+          <div class="menu">
+            <div class="menu__wrapper">
+              <a href="index.html" class="menu__logo">
+                <img class="menu__logo" src="../img/logo.png" alt="Логотип" />
+              </a>
+              <div class="menu__phone">
+                <a href="tel:+74862507736" class="menu__phone-number"
+                  >+7 (4862) 50-77-36
+                </a>
+                <a href="#" class="menu__phone-text">Обратный звонок</a>
+              </div>
+              <div class="menu__contacts">
+                <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
+                <a href="contacts.html" class="menu__map">Показать на карте</a>
+              </div>
+              <div class="menu__clock-work">
+                Режим работы: <br />
+                Пн-пт: с 8:00 до 17:30
+              </div>
+              <div class="menu__inner">
+                <div class="menu__phone">
+                  <a href="tel:+74862507736" class="menu__phone-number"
+                    >+7 (4862) 50-77-36
+                  </a>
+                  <a href="#" class="menu__phone-text">Обратный звонок</a>
+                </div>
+                <div class="menu__contacts">
+                  <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
+                  <a href="contacts.html" class="menu__map"
+                    >Показать на карте</a
+                  >
+                </div>
+                <div class="menu__clock-work">
+                  Режим работы: <br />
+                  Пн-пт: с 8:00 до 17:30
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="container">
+          <div class="burger">
+            <span></span>
+          </div>
+          <div class="nav__wrapper">
+            <a class="nav__link" href="index.html">Главная</a>
+            <a class="nav__link" href="#our-discount--scroll"
+              >Действующие скидки</a
+            >
+            <a class="nav__link" href="tariffs.html">Тарифы</a>
+            <a class="nav__link" href="services.html">Услуги</a>
+            <a class="nav__link" id="form-partners" href="#">Стать партнером</a>
+            <a class="nav__link" href="reviews.html">Отзывы</a>
+            <a class="nav__link" href="contacts.html">Контакты</a>
+          </div>
+          <div class="modal-bg">
+            <div class="modal">
+              <div class="modal__inner">
+                <h4 class="modal__title">Узнай</h4>
+                <img
+                  class="modal__close"
+                  src="../img/modal-close.png"
+                  alt="Закрыть"
+                />
+              </div>
+              <div class="modal__body">
+                <input
+                  class="modal__input-row"
+                  type="text"
+                  placeholder="Фамилия, имя"
+                />
+                <div class="modal__input-wrap">
+                  <input
+                    class="modal__input-row2"
+                    placeholder="Телефон"
+                    type="text"
+                  />
+                  <input
+                    class="modal__input-row2"
+                    placeholder="E-mail(необязательно)"
+                    type="text"
+                  />
+                </div>
+                <div class="card__price-wrapper">
+                  <div class="card__price card__price-old">
+                    от <span>125 000 ₽/сутки</span>
+                  </div>
+                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
+                </div>
+                <button class="modal__send" type="submit">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="carousel__inner">
+        <p class="carousel__text-big">
+          Роскошная аренда<br />
+          автомобилей
+        </p>
+        <p class="carousel__text-small">гибкий подход</p>
+        <p class="carousel__text-small">к вашим пожеланиям</p>
+        <p></p>
+        <div class="overlay"></div>
+      </div>
+      <section class="cars">
+        <div class="container">
+          <ol class="breadcrumb">
+            <a class="breadcrumb__link" href="index.html"
+              ><li class="breadcrumb-item">Главная</li></a
+            >
+            <a class="breadcrumb__link" href="sedans.html"
+              ><li class="breadcrumb-item">Седаны</li></a
+            >
+          </ol>
+          <h1>Прокатная компания СуперАвто</h1>
+          <h2>Седаны</h2>
+          <div class="card__wrapper">
+            <div class="card">
+              <img src="../img/mercedesW223.jpg" alt="mercedes W223 AMG" />
+              <div class="card__description">
+                <h3 class="card__subtitle">Mercedes S-класс AMG</h3>
+                <ul class="card__list">
+                  <li class="card__item">
+                    <span>Год выпуска</span>
+                    <span>2023</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Объём мотора</span>
+                    <span>4.0 л.</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Мощность</span>
+                    <span>820 л.с.</span>
+                  </li>
+                </ul>
+                <div class="card__price-wrapper">
+                  <div class="card__price">от <span>14 000 ₽/сутки</span></div>
+                </div>
+                <button class="card__order">Заказать</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../img/BMW-7-Series.jpg" alt="BMW-7-Series" />
+              <div class="card__description">
+                <h3 class="card__subtitle">BMW 7-series</h3>
+                <ul class="card__list">
+                  <li class="card__item">
+                    <span>Год выпуска</span>
+                    <span>2023</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Объём мотора</span>
+                    <span>4.4 л.</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Мощность</span>
+                    <span>544 л.с.</span>
+                  </li>
+                </ul>
+                <div class="card__price-wrapper">
+                  <div class="card__price">от <span>12 000 ₽/сутки</span></div>
+                </div>
+                <button class="card__order">Заказать</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="../img/Rolls-royce Ghost Extended.jpg"
+                alt="Rolls-royce Ghost Extended"
+              />
+              <div class="card__description">
+                <h3 class="card__subtitle">Rolls-royce Ghost Extended</h3>
+                <ul class="card__list">
+                  <li class="card__item">
+                    <span>Год выпуска</span>
+                    <span>2023</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Объём мотора</span>
+                    <span>6.8 л.</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Мощность</span>
+                    <span>571 л.с.</span>
+                  </li>
+                </ul>
+                <div class="card__price-wrapper">
+                  <div class="card__price">от <span>17 000 ₽/сутки</span></div>
+                </div>
+                <button class="card__order">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="our-discount--scroll" class="our-discount">
+        <div class="container">
+          <h3 class="our-discount__title">Наши скидки</h3>
+          <div class="card__wrapper">
+            <div class="card">
+              <img src="../img/mercedesW223.jpg" alt="Mercedes S-класс AMG" />
+              <div class="card__description">
+                <h3 class="card__subtitle">Mercedes S-класс AMG</h3>
+                <ul class="card__list">
+                  <li class="card__item">
+                    <span>Год выпуска</span>
+                    <span>2023</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Объём мотора</span>
+                    <span>4.0 л.</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Мощность</span>
+                    <span>820 л.с.</span>
+                  </li>
+                </ul>
+                <div class="card__price-wrapper">
+                  <div class="card__price card__price-old">
+                    от <span>125 000 ₽/сутки</span>
+                  </div>
+                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
+                </div>
+                <button class="card__order">Заказать</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../img/Rolls-Royce-Dawn.jpg" alt="Rolls-royce Dawn" />
+              <div class="card__description">
+                <h3 class="card__subtitle">Rolls-royce Dawn</h3>
+                <ul class="card__list">
+                  <li class="card__item">
+                    <span>Год выпуска</span>
+                    <span>2023</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Объём мотора</span>
+                    <span>4.4 л.</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Мощность</span>
+                    <span>625 л.с.</span>
+                  </li>
+                </ul>
+                <div class="card__price-wrapper">
+                  <div class="card__price card__price-old">
+                    от <span>125 000 ₽/сутки</span>
+                  </div>
+                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
+                </div>
+                <button class="card__order">Заказать</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../img/McLaren-765Lt.jpg" alt="McLaren-765Lt" />
+              <div class="card__description">
+                <h3 class="card__subtitle">McLaren 765Lt</h3>
+                <ul class="card__list">
+                  <li class="card__item">
+                    <span>Год выпуска</span>
+                    <span>2023</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Объём мотора</span>
+                    <span>4.4 л.</span>
+                  </li>
+                  <li class="card__item">
+                    <span>Мощность</span>
+                    <span>625 л.с.</span>
+                  </li>
+                </ul>
+                <div class="card__price-wrapper">
+                  <div class="card__price card__price-old">
+                    от <span>125 000 ₽/сутки</span>
+                  </div>
+                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
+                </div>
+                <button class="card__order">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="menu">
+          <div class="menu__wrapper">
+            <a href="index.html" class="menu__logo">
+              <img class="menu__logo" src="../img/logo.png" alt="Логотип" />
+            </a>
+            <div class="menu__phone">
+              <a href="tel:+74862507736" class="menu__phone-number"
+                >+7 (4862) 50-77-36
+              </a>
+              <a href="" class="menu__phone-text">Обратный звонок</a>
+            </div>
+            <div class="menu__contacts">
+              <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
+              <a href="contacts.html" class="menu__map">Показать на карте</a>
+            </div>
+            <div class="menu__clock-work">
+              Режим работы: <br />
+              Пн-пт: с 8:00 до 17:30
+            </div>
+            <div class="menu__inner">
+              <div class="menu__phone">
+                <a href="tel:+74862507736" class="menu__phone-number"
+                  >+7 (4862) 50-77-36
+                </a>
+                <a href="" class="menu__phone-text">Обратный звонок</a>
+              </div>
+              <div class="menu__contacts">
+                <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
+                <a href="contacts.html" class="menu__map">Показать на карте</a>
+              </div>
+              <div class="menu__clock-work">
+                Режим работы: <br />
+                Пн-пт: с 8:00 до 17:30
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/form.js"></script>
+    <script src="../scripts/burger.js"></script>
+    <script src="../scripts/scrollHandler.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+.contacts {
+  padding-top: 25px;
+  margin-bottom: 25px;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+  &__title {
+    text-align: center;
+    padding-bottom: 25px;
+    font-family: "Museo Cyrl 700";
+  }
+  &__tel {
+    position: relative;
+    padding-left: 45px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 41px;
+      height: 35px;
+      background: url("./icons/phone.svg");
+    }
+  }
+  &__address {
+    text-align: center;
+  }
+}
+
+.orangered {
+  color: #ff5f00;
+}
+
+.orange-bg {
+  background: url(./img/orange-bg.jpg) no-repeat center center;
+  padding: 20px 0;
+  margin: 0 25px;
+  background-size: cover;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  &__row {
+    text-align: center;
+  }
+  &__title {
+    font-size: 42px;
+    font-family: "Museo Cyrl 700", Arial;
+    line-height: 50px;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+}

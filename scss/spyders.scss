@@ -1,0 +1,38 @@
+.pad-bot {
+  padding-bottom: 45px;
+}
+
+.cars {
+  padding-top: 25px;
+  h1 {
+    text-align: center;
+    font-family: "Museo Cyrl 700";
+    font-size: 48px;
+  }
+  h2 {
+    text-align: center;
+    font-family: "Museo Cyrl 700";
+    font-size: 40px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.breadcrumb {
+  padding-top: 16px;
+  list-style: none;
+}
+
+.breadcrumb-item {
+  display: inline;
+  font-size: 18px;
+}
+
+.breadcrumb a + a::before {
+  padding: 8px;
+  color: black;
+  content: ">>";
+}

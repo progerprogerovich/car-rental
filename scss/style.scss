@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+@import "./header.scss";
+@import "./main-section.scss";
+@import "./our-section.scss";
+@import "./about-company.scss";
+@import "./footer.scss";
+@import "./all.scss";
+@import "./reviews.scss";
+@import "./services.scss";
+@import "./spyders.scss";
+@import "./tariffs.scss";
+@import "./contacts.scss";
+@import "./adaptive.scss";
+@import "./rasscrochka.scss";
