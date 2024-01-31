@@ -121,11 +121,10 @@
                   alt="Закрыть"
                 />
               </div>
-              <div class="modal__body">
+              <form class="modal__body">
                 <label
                   >Марка <input class="modal__input-row" type="text"
                 /></label>
-
                 <label
                   >Модель <input class="modal__input-row" type="text"
                 /></label>
@@ -142,7 +141,7 @@
                   >ФИО <input class="modal__input-row" type="text"
                 /></label>
                 <button class="modal__send" type="submit">Отправить</button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -182,16 +181,16 @@
         </div>
       </div>
       <div class="container">
-        <script
-          type="text/javascript"
-          charset="utf-8"
-          async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A46ed3bf388791cd486c11002774c465809e7cdef69b9395b444cd2887814fcc4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
-        ></script>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A46ed3bf388791cd486c11002774c465809e7cdef69b9395b444cd2887814fcc4&amp;source=constructor"
+          width="1140"
+          height="400"
+          frameborder="0"
+        ></iframe>
       </div>
-      <section id="our-discount--scroll" class="our-discount">
+      <section id="our-discount--scroll" class="cards">
         <div class="container">
-          <h3 class="our-discount__title">Наши скидки</h3>
+          <h3 class="cards__title">Наши скидки</h3>
           <div class="card__wrapper">
             <div class="card">
               <img src="../img/bmwM8.jpg" alt="BMW M8" />

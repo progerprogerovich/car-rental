@@ -65,16 +65,18 @@ img {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 5;
 }
 .header .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
+  position: relative;
   background: #fff;
   padding: 30px;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
+  margin: auto;
+  top: 50%;
+}
+.header .modal__input {
+  width: 100%;
 }
 .header .modal__title {
   padding-bottom: 15px;
@@ -94,18 +96,26 @@ img {
 .header .modal__input-wrap {
   margin-top: 12px;
   display: flex;
-  justify-content: space-between;
-}
-.header .modal__input-row {
-  width: 100%;
+  gap: 15px;
 }
 .header .modal__send {
   margin-top: 12px;
-  width: 108.66;
   height: 42px;
   padding: 11px 14px;
   border: none;
   background-color: #fb8100;
+}
+.header .modal:last-child > .modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header .modal__input-row2 {
+  width: 50%;
+}
+.header label {
+  display: flex;
+  flex-direction: column;
 }
 .header input {
   height: 42px;
@@ -199,6 +209,7 @@ img {
 }
 .header .burger.active {
   top: 0;
+  position: fixed;
 }
 .header .burger span {
   height: 2px;
@@ -250,7 +261,7 @@ img {
 }
 .main .carousel__inner .carousel__text-small {
   font-size: 25px;
-  font-family: "Museo Cyrl 900";
+  font-family: "Museo Cyrl";
 }
 .main .carousel__inner p {
   color: yellow;
@@ -303,20 +314,15 @@ li {
   list-style: none;
 }
 
-.our-discount {
-  margin-top: 25px;
+.cards {
   padding-bottom: 26.25px;
 }
-.our-discount__title {
+.cards__title {
+  margin-top: 25px;
   margin-bottom: 25px;
   text-align: center;
   font-size: 40px;
   font-family: "Museo Cyrl 700";
-}
-
-.card__wrapper {
-  display: flex;
-  margin-top: 36px;
 }
 
 .card {
@@ -324,6 +330,10 @@ li {
 }
 .card img {
   max-width: 100%;
+}
+.card__wrapper {
+  display: flex;
+  margin-top: 36px;
 }
 .card__description {
   background: #fff;
@@ -351,7 +361,6 @@ li {
   text-decoration: line-through;
 }
 .card__order {
-  display: block;
   margin: 0 auto;
   background: #ff5f00;
   border: none;
@@ -467,7 +476,6 @@ footer .menu__clock-work {
 }
 
 .reviews {
-  padding-bottom: 35px;
   padding-top: 25px;
 }
 .reviews__title {
@@ -483,7 +491,6 @@ footer .menu__clock-work {
   color: #202020;
   line-height: 1.5;
   box-sizing: border-box;
-  padding-bottom: 35px;
   display: flex;
   flex-direction: row-reverse;
   position: relative;
@@ -498,7 +505,7 @@ footer .menu__clock-work {
 }
 
 .prices {
-  padding: 25px 25px;
+  padding: 25px 25px 0px 25px;
 }
 .prices .breadcrumb {
   padding: 0 0px;
@@ -509,7 +516,6 @@ footer .menu__clock-work {
   font-family: "Museo Cyrl 700";
 }
 .prices table {
-  -webkit-text-size-adjust: 100%;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -677,6 +683,9 @@ footer .menu__clock-work {
     width: 540px;
     max-width: 100%;
   }
+  .modal {
+    max-width: 500px;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -746,7 +755,7 @@ footer .menu__clock-work {
   .nav__wrapper.open {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -754,8 +763,7 @@ footer .menu__clock-work {
     background-color: #fff;
     top: 0;
     left: 0;
-    animation: burgerAnimation 0.4s;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
   .menu .menu__wrapper {
     flex-direction: column;

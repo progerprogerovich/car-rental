@@ -2,20 +2,14 @@ li {
   list-style: none;
 }
 
-.our-discount {
-  margin-top: 25px;
+.cards {
   padding-bottom: 26.25px;
   &__title {
+    margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
     font-size: 40px;
     font-family: "Museo Cyrl 700";
-  }
-}
-.card {
-  &__wrapper {
-    display: flex;
-    margin-top: 36px;
   }
 }
 
@@ -23,6 +17,10 @@ li {
   padding: 0px 25px;
   img {
     max-width: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    margin-top: 36px;
   }
   &__description {
     background: #fff;
@@ -50,7 +48,6 @@ li {
     text-decoration: line-through;
   }
   &__order {
-    display: block;
     margin: 0 auto;
     background: #ff5f00;
     border: none;
