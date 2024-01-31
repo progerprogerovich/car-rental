@@ -49,22 +49,25 @@
                     alt="Закрыть"
                   />
                 </div>
-                <form class="modal__body">
+                <form class="modal__body" onsubmit="return validateForm()">
                   <input
                     class="modal__input"
                     type="text"
                     placeholder="Фамилия, имя"
+                    id="surname_name"
                   />
                   <div class="modal__input-wrap">
                     <input
                       class="modal__input"
                       placeholder="Телефон"
                       type="text"
+                      id="phone"
                     />
                     <input
                       class="modal__input"
                       placeholder="E-mail"
                       type="text"
+                      id="email"
                     />
                   </div>
                   <button class="modal__send" type="submit">Отправить</button>
@@ -145,24 +148,29 @@
                   alt="Закрыть"
                 />
               </div>
-              <form class="modal__body">
+              <form class="modal__body" onsubmit="return validateForm()">
                 <label
-                  >Марка <input class="modal__input-row" type="text"
+                  >Марка <input class="modal__input-row" type="text" id="marka"
                 /></label>
                 <label
-                  >Модель <input class="modal__input-row" type="text"
+                  >Модель
+                  <input class="modal__input-row" type="text" id="model"
                 /></label>
                 <label
-                  >Год выпуска <input class="modal__input-row" type="text"
+                  >Год выпуска
+                  <input class="modal__input-row" type="text" id="year"
                 /></label>
                 <label
-                  >Пробег <input class="modal__input-row" type="text"
+                  >Пробег
+                  <input class="modal__input-row" type="text" id="mileage"
                 /></label>
                 <label
-                  >Ваш телефон <input class="modal__input-row" type="text"
+                  >Ваш телефон
+                  <input class="modal__input-row" type="text" id="phone"
                 /></label>
                 <label
-                  >ФИО <input class="modal__input-row" type="text"
+                  >ФИО
+                  <input class="modal__input-row" type="text" id="surname_name"
                 /></label>
                 <button class="modal__send" type="submit">Отправить</button>
               </form>
