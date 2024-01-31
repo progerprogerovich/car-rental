@@ -196,6 +196,7 @@ img {
 .header .nav__link {
   font-size: 17px;
   font-weight: 600;
+  color: #ffffff;
 }
 .header .burger {
   display: none;
