@@ -642,9 +642,6 @@ footer .menu__clock-work {
   height: 35px;
   background: url("./icons/phone.svg");
 }
-.contacts__address {
-  text-align: center;
-}
 
 .orangered {
   color: #ff5f00;
