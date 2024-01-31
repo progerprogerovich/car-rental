@@ -34,21 +34,9 @@ function validateForm() {
   let name = document.getElementById("surname_name").value;
   let email = document.getElementById("email").value;
   let phone = document.getElementById("phone").value;
-  let marka = document.getElementById("marka").value;
-  let model = document.getElementById("model").value;
-  let year = document.getElementById("year").value;
-  let mileage = document.getElementById("mileage").value;
 
   // Простая проверка наличия значений
-  if (
-    name.trim() === "" ||
-    email.trim() === "" ||
-    phone.trim() === "" ||
-    marka.trim() === "" ||
-    model.trim() === "" ||
-    year.trim() === "" ||
-    mileage.trim() === ""
-  ) {
+  if (name.trim() === "" || email.trim() === "" || phone.trim() === "") {
     alert("Заполните все обязательные поля");
     return false;
   }

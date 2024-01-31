@@ -124,7 +124,10 @@
                   alt="Закрыть"
                 />
               </div>
-              <form class="modal__body" onsubmit="return validateForm()">
+              <form
+                class="modal__body"
+                onsubmit="return validateFormPartners()"
+              >
                 <label
                   >Марка <input class="modal__input-row" type="text" id="marka"
                 /></label>
@@ -146,7 +149,7 @@
                 /></label>
                 <label
                   >ФИО
-                  <input class="modal__input-row" type="text" id="surname_name"
+                  <input class="modal__input-row" type="text" id="name_surname"
                 /></label>
                 <button class="modal__send" type="submit">Отправить</button>
               </form>
@@ -385,5 +388,6 @@
     <script src="../scripts/form.js"></script>
     <script src="../scripts/burger.js"></script>
     <script src="../scripts/scrollHandler.js"></script>
+    <script src="./scripts/form-partners.js"></script>
   </body>
 </html>
