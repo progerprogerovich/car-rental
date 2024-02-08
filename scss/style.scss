@@ -1,5 +1,7 @@
-@import "./variables.scss";
-@import "./all.scss";
+@import "reset.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "all.scss";
 
 * {
   margin: 0;
@@ -45,9 +47,13 @@ img {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: relative;
     &__link {
       font-family: "Open Sans";
       font-weight: 600;
+      &:hover {
+        color: #000;
+      }
     }
 
     &__button {
@@ -58,6 +64,11 @@ img {
       padding: 0px 8px;
       font-weight: 400;
       text-transform: uppercase;
+      font-size: 13px;
+      &:hover {
+        transition: opacity 0.8s;
+        opacity: 0.8;
+      }
     }
   }
   .modal-bg {
@@ -211,6 +222,9 @@ img {
     font-size: 17px;
     font-weight: 600;
     color: #ffffff;
+    &:hover {
+      color: #000;
+    }
   }
 }
 
@@ -270,14 +284,15 @@ img {
     align-items: center;
     .carousel__text-big {
       font-size: 65px;
-      font-family: "Museo Cyrl 900";
+      font-family: $font-museo900;
     }
     .carousel__text {
       font-size: 25px;
+      font-family: $font-museo700;
     }
     .carousel__text-small {
       font-size: 25px;
-      font-family: "Museo Cyrl";
+      font-family: $font-museo700;
     }
     p {
       color: yellow;
@@ -306,11 +321,11 @@ img {
     }
     &__title {
       font-size: 48px;
-      font-family: "Museo Cyrl 700";
+      font-family: $font-museo900;
     }
     &__subtitle {
       font-size: 40px;
-      font-family: "Museo Cyrl 700";
+      font-family: $font-museo700;
     }
     &__item {
       display: flex;
@@ -318,20 +333,25 @@ img {
       gap: 9px;
       padding: 0px 15px;
       margin-bottom: 30px;
-      h3 {
-        background: $main__service-item_color;
-        padding: 20px 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $white;
+    }
+    &__link {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      &:hover {
+        box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.6);
       }
     }
+    &__description {
+      background: $main__service-item_color;
+      padding: 20px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-family: $font-museo700;
+    }
   }
-}
-
-li {
-  list-style: none;
 }
 
 .cards {
@@ -341,7 +361,7 @@ li {
     margin-bottom: 25px;
     text-align: center;
     font-size: 40px;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
   }
 }
 
@@ -366,7 +386,7 @@ li {
   }
   &__subtitle {
     text-align: center;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
   }
   &__item {
     display: flex;
@@ -406,13 +426,16 @@ li {
     font-size: 16px;
     line-height: 1.5;
     margin-right: 24px;
+    &-subtitle {
+      font-family: $font-museo700;
+    }
   }
   &__description {
     margin-bottom: 16px;
   }
   &__title {
     font-size: 38px;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
     margin-bottom: 16px;
   }
 }
@@ -424,7 +447,7 @@ li {
   &__title {
     text-align: center;
     padding-bottom: 25px;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
   }
   .reviews_block {
     padding: 0 25px;
@@ -458,7 +481,7 @@ li {
   h1 {
     text-align: center;
     padding-bottom: 25px;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
   }
   table {
     font-family: "Open Sans", sans-serif;
@@ -517,12 +540,12 @@ li {
   padding-top: 25px;
   h1 {
     text-align: center;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
     font-size: 48px;
   }
   h2 {
     text-align: center;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
     font-size: 40px;
   }
   &__wrapper {
@@ -534,7 +557,6 @@ li {
 
 .breadcrumb {
   padding-top: 16px;
-  list-style: none;
 }
 
 .breadcrumb-item {
@@ -553,7 +575,7 @@ li {
   padding-top: 25px;
   h1 {
     text-align: center;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
     padding-bottom: 25px;
   }
   &__wrapper {
@@ -576,7 +598,7 @@ li {
   &__title {
     text-align: center;
     padding-bottom: 25px;
-    font-family: "Museo Cyrl 700";
+    font-family: $font-museo700;
   }
   &__tel {
     position: relative;
@@ -613,7 +635,7 @@ li {
   }
   &__title {
     font-size: 42px;
-    font-family: "Museo Cyrl 700", Arial;
+    font-family: $font-museo700;
     line-height: 50px;
     margin-bottom: 24px;
     color: #fff;
@@ -765,18 +787,6 @@ li {
       width: 50%;
       margin-bottom: 30px;
     }
-  }
-
-  .about-company__wrap {
-    flex-direction: column;
-  }
-  .about-company__left {
-    width: 100%;
-    padding-left: 0px;
-  }
-  .about-company__right {
-    width: 100%;
-    margin-right: 0px;
   }
 }
 
