@@ -13,6 +13,17 @@ body {
   font-weight: 400;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -270,6 +281,7 @@ img {
 }
 
 .main {
+  flex-grow: 1;
   background: url("./img/background-image.png");
   .carousel__inner {
     height: 519px;

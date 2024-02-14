@@ -28,55 +28,363 @@
     <title>Car-rental</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__bcgr">
-        <div class="container">
-          <nav class="top-nav">
-            <div class="top-nav__left">
-              <a class="top-nav__link" href="./pages/rassrochka.html"
-                >Рассрочка</a
-              >
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__bcgr">
+          <div class="container">
+            <nav class="top-nav">
+              <div class="top-nav__left">
+                <a class="top-nav__link" href="./pages/rassrochka.html"
+                  >Рассрочка</a
+                >
+              </div>
+              <button class="top-nav__button">Забронировать автомобиль</button>
+              <div class="modal-bg">
+                <div class="modal">
+                  <div class="modal__inner">
+                    <h4 class="modal__title">Обратная связь</h4>
+                    <img
+                      class="modal__close"
+                      src="./img/modal-close.png"
+                      alt="Закрыть"
+                    />
+                  </div>
+                  <form class="modal__body" onsubmit="return validateForm()">
+                    <input
+                      class="modal__input"
+                      type="text"
+                      placeholder="Фамилия, имя"
+                      id="surname_name"
+                    />
+                    <div class="modal__input-wrap">
+                      <input
+                        class="modal__input"
+                        placeholder="Телефон"
+                        type="text"
+                        id="phone"
+                      />
+                      <input
+                        class="modal__input"
+                        placeholder="E-mail"
+                        type="text"
+                        id="email"
+                      />
+                    </div>
+                    <button class="modal__send" type="submit">Отправить</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="main-header">
+          <div class="container">
+            <div class="menu">
+              <div class="menu__wrapper">
+                <a href="index.html" class="menu__logo">
+                  <img class="menu__logo" src="./img/logo.png" alt="Логотип" />
+                </a>
+                <div class="menu__phone">
+                  <a href="tel:+74862507736" class="menu__phone-number"
+                    >+7 (4862) 50-77-36
+                  </a>
+                  <a href="#" class="menu__phone-text">Обратный звонок</a>
+                </div>
+                <div class="menu__contacts">
+                  <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
+                  <a href="./pages/contacts.html" class="menu__map"
+                    >Показать на карте</a
+                  >
+                </div>
+                <div class="menu__clock-work">
+                  Режим работы: <br />
+                  Пн-пт: с 8:00 до 17:30
+                </div>
+                <div class="menu__inner">
+                  <div class="menu__phone">
+                    <a href="tel:+74862507736" class="menu__phone-number"
+                      >+7 (4862) 50-77-36
+                    </a>
+                    <a href="#" class="menu__phone-text">Обратный звонок</a>
+                  </div>
+                  <div class="menu__contacts">
+                    <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
+                    <a href="./pages/contacts.html" class="menu__map"
+                      >Показать на карте</a
+                    >
+                  </div>
+                  <div class="menu__clock-work">
+                    Режим работы: <br />
+                    Пн-пт: с 8:00 до 17:30
+                  </div>
+                </div>
+              </div>
             </div>
-            <button class="top-nav__button">Забронировать автомобиль</button>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="container">
+            <div class="burger">
+              <span></span>
+            </div>
+            <div class="nav__wrapper">
+              <a class="nav__link" href="index.html">Главная</a>
+              <a class="nav__link" href="#our-discount--scroll"
+                >Действующие скидки</a
+              >
+              <a class="nav__link" href="./pages/tariffs.html">Тарифы</a>
+              <a class="nav__link" href="./pages/services.html">Услуги</a>
+              <a class="nav__link" id="form-partners" href="#"
+                >Стать партнером</a
+              >
+              <a class="nav__link" href="./pages/reviews.html">Отзывы</a>
+              <a class="nav__link" href="./pages/contacts.html">Контакты</a>
+            </div>
             <div class="modal-bg">
               <div class="modal">
                 <div class="modal__inner">
-                  <h4 class="modal__title">Обратная связь</h4>
+                  <h4 class="modal__title">
+                    Узнай сколько ты можешь зарабатывать на своём авто
+                  </h4>
                   <img
                     class="modal__close"
                     src="./img/modal-close.png"
                     alt="Закрыть"
                   />
                 </div>
-                <form class="modal__body" onsubmit="return validateForm()">
-                  <input
-                    class="modal__input"
-                    type="text"
-                    placeholder="Фамилия, имя"
-                    id="surname_name"
-                  />
-                  <div class="modal__input-wrap">
+                <form
+                  class="modal__body"
+                  onsubmit="return validateFormPartners()"
+                >
+                  <label
+                    >Марка
+                    <input class="modal__input-row" type="text" id="marka"
+                  /></label>
+                  <label
+                    >Модель
+                    <input class="modal__input-row" type="text" id="model"
+                  /></label>
+                  <label
+                    >Год выпуска
+                    <input class="modal__input-row" type="text" id="year"
+                  /></label>
+                  <label
+                    >Пробег
+                    <input class="modal__input-row" type="text" id="mileage"
+                  /></label>
+                  <label
+                    >Ваш телефон
+                    <input class="modal__input-row" type="text" id="phone"
+                  /></label>
+                  <label
+                    >ФИО
                     <input
-                      class="modal__input"
-                      placeholder="Телефон"
+                      class="modal__input-row"
                       type="text"
-                      id="phone"
-                    />
-                    <input
-                      class="modal__input"
-                      placeholder="E-mail"
-                      type="text"
-                      id="email"
-                    />
-                  </div>
+                      id="name_surname"
+                  /></label>
                   <button class="modal__send" type="submit">Отправить</button>
                 </form>
               </div>
             </div>
-          </nav>
+          </div>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="carousel__inner" src="./img/slider2.png">
+          <p class="carousel__text-big">
+            Роскошная аренда<br />
+            автомобилей
+          </p>
+          <p class="carousel__text">гибкий подход</p>
+          <p class="carousel__text-small">к вашим пожеланиям</p>
+          <div class="overlay"></div>
         </div>
-      </div>
-      <div class="main-header">
+        <section class="main-section">
+          <div class="container">
+            <h1 class="main-section__title t-a-center">
+              Прокатная компания СуперАвто
+            </h1>
+            <h2 class="main-section__subtitle t-a-center">Наш автопарк</h2>
+            <div class="main-section__wrapper">
+              <div class="main-section__item">
+                <a class="main-section__link" href="./pages/spyders.html"
+                  ><img
+                    class="main-section__img"
+                    src="./img/convertible.jpg"
+                    alt="Кабриолеты"
+                  />
+                  <h3 class="main-section__description">Кабриолеты</h3></a
+                >
+              </div>
+              <div class="main-section__item">
+                <a class="main-section__link" href="./pages/sedans.html"
+                  ><img
+                    class="main-section__img"
+                    src="./img/sedan.jpg"
+                    alt="Седаны"
+                  />
+                  <h3 class="main-section__description">Седаны</h3></a
+                >
+              </div>
+              <div class="main-section__item">
+                <a class="main-section__link" href="./pages/crossovers.html"
+                  ><img
+                    class="main-section__img"
+                    src="./img/crossover.jpg"
+                    alt="Кроссоверы"
+                  />
+                  <h3 class="main-section__description">Кроссоверы</h3></a
+                >
+              </div>
+              <div class="main-section__item">
+                <a class="main-section__link" href="./pages/limousines.html"
+                  ><img
+                    class="main-section__img"
+                    src="./img/limouzin.jpg"
+                    alt="Лимузины"
+                  />
+                  <h3 class="main-section__description">Лимузины</h3></a
+                >
+              </div>
+              <div class="main-section__item">
+                <a href="./pages/minivans.html" class="main-section__link"
+                  ><img
+                    class="main-section__img"
+                    src="./img/minivan.jpg"
+                    alt="Минивены"
+                  />
+                  <h3 class="main-section__description">Минивены</h3></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="our-discount--scroll" class="cards">
+          <div class="container">
+            <h3 class="cards__title">Наши скидки</h3>
+            <div class="card__wrapper">
+              <div class="card">
+                <img src="./img/mercedesW223.jpg" alt="Mercedes S-класс AMG" />
+                <div class="card__description">
+                  <h3 class="card__subtitle">Mercedes S-класс AMG</h3>
+                  <ul class="card__list">
+                    <li class="card__item">
+                      <span>Год выпуска</span>
+                      <span>2023</span>
+                    </li>
+                    <li class="card__item">
+                      <span>Объём мотора</span>
+                      <span>4.0 л.</span>
+                    </li>
+                    <li class="card__item">
+                      <span>Мощность</span>
+                      <span>820 л.с.</span>
+                    </li>
+                  </ul>
+                  <div class="card__price-wrapper">
+                    <div class="card__price card__price-old">
+                      от <span>125 000 ₽/сутки</span>
+                    </div>
+                    <div class="card__price">
+                      от <span>20 000 ₽/сутки</span>
+                    </div>
+                  </div>
+                  <button class="card__order">Заказать</button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./img/Rolls-Royce-Dawn.jpg" alt="Rolls-royce Dawn" />
+                <div class="card__description">
+                  <h3 class="card__subtitle">Rolls-royce Dawn</h3>
+                  <ul class="card__list">
+                    <li class="card__item">
+                      <span>Год выпуска</span>
+                      <span>2023</span>
+                    </li>
+                    <li class="card__item">
+                      <span>Объём мотора</span>
+                      <span>4.4 л.</span>
+                    </li>
+                    <li class="card__item">
+                      <span>Мощность</span>
+                      <span>625 л.с.</span>
+                    </li>
+                  </ul>
+                  <div class="card__price-wrapper">
+                    <div class="card__price card__price-old">
+                      от <span>125 000 ₽/сутки</span>
+                    </div>
+                    <div class="card__price">
+                      от <span>20 000 ₽/сутки</span>
+                    </div>
+                  </div>
+                  <button class="card__order">Заказать</button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./img/McLaren-765Lt.jpg" alt="McLaren-765Lt" />
+                <div class="card__description">
+                  <h3 class="card__subtitle">McLaren 765Lt</h3>
+                  <ul class="card__list">
+                    <li class="card__item">
+                      <span>Год выпуска</span>
+                      <span>2023</span>
+                    </li>
+                    <li class="card__item">
+                      <span>Объём мотора</span>
+                      <span>4.4 л.</span>
+                    </li>
+                    <li class="card__item">
+                      <span>Мощность</span>
+                      <span>625 л.с.</span>
+                    </li>
+                  </ul>
+                  <div class="card__price-wrapper">
+                    <div class="card__price card__price-old">
+                      от <span>125 000 ₽/сутки</span>
+                    </div>
+                    <div class="card__price">
+                      от <span>20 000 ₽/сутки</span>
+                    </div>
+                  </div>
+                  <button class="card__order">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="about-company--scroll" class="about-company">
+          <div class="container">
+            <h2 class="about-company__title t-a-center">О компании</h2>
+            <div class="about-company__wrap">
+              <img
+                class="about-company__left"
+                src="./img/process.jpg"
+                alt="Процесс компании"
+              />
+              <div class="about-company__right">
+                <h3 class="about-company__right-subtitle">Процесс</h3>
+                <p class="about-company__description">
+                  Откройте для себя легкость и уверенность в путешествиях с
+                  нашей арендой автомобилей. Мы предоставляем современные
+                  транспортные средства с передовыми технологиями, обеспечивая
+                  комфорт и беззаботность в каждой поездке.
+                </p>
+                <p class="about-company__description">
+                  От выбора автомобиля до возврата после аренды — каждый этап
+                  контролируется для вашего удобства. Прозрачные условия,
+                  доступные цены и высший уровень обслуживания делают нашу
+                  компанию идеальным выбором для незабываемых путешествий.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
         <div class="container">
           <div class="menu">
             <div class="menu__wrapper">
@@ -87,7 +395,7 @@
                 <a href="tel:+74862507736" class="menu__phone-number"
                   >+7 (4862) 50-77-36
                 </a>
-                <a href="#" class="menu__phone-text">Обратный звонок</a>
+                <a href="" class="menu__phone-text">Обратный звонок</a>
               </div>
               <div class="menu__contacts">
                 <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
@@ -120,302 +428,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <nav class="nav">
-        <div class="container">
-          <div class="burger">
-            <span></span>
-          </div>
-          <div class="nav__wrapper">
-            <a class="nav__link" href="index.html">Главная</a>
-            <a class="nav__link" href="#our-discount--scroll"
-              >Действующие скидки</a
-            >
-            <a class="nav__link" href="./pages/tariffs.html">Тарифы</a>
-            <a class="nav__link" href="./pages/services.html">Услуги</a>
-            <a class="nav__link" id="form-partners" href="#">Стать партнером</a>
-            <a class="nav__link" href="./pages/reviews.html">Отзывы</a>
-            <a class="nav__link" href="./pages/contacts.html">Контакты</a>
-          </div>
-          <div class="modal-bg">
-            <div class="modal">
-              <div class="modal__inner">
-                <h4 class="modal__title">
-                  Узнай сколько ты можешь зарабатывать на своём авто
-                </h4>
-                <img
-                  class="modal__close"
-                  src="./img/modal-close.png"
-                  alt="Закрыть"
-                />
-              </div>
-              <form
-                class="modal__body"
-                onsubmit="return validateFormPartners()"
-              >
-                <label
-                  >Марка <input class="modal__input-row" type="text" id="marka"
-                /></label>
-                <label
-                  >Модель
-                  <input class="modal__input-row" type="text" id="model"
-                /></label>
-                <label
-                  >Год выпуска
-                  <input class="modal__input-row" type="text" id="year"
-                /></label>
-                <label
-                  >Пробег
-                  <input class="modal__input-row" type="text" id="mileage"
-                /></label>
-                <label
-                  >Ваш телефон
-                  <input class="modal__input-row" type="text" id="phone"
-                /></label>
-                <label
-                  >ФИО
-                  <input class="modal__input-row" type="text" id="name_surname"
-                /></label>
-                <button class="modal__send" type="submit">Отправить</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="main">
-      <div class="carousel__inner" src="./img/slider2.png">
-        <p class="carousel__text-big">
-          Роскошная аренда<br />
-          автомобилей
-        </p>
-        <p class="carousel__text">гибкий подход</p>
-        <p class="carousel__text-small">к вашим пожеланиям</p>
-        <div class="overlay"></div>
-      </div>
-      <section class="main-section">
-        <div class="container">
-          <h1 class="main-section__title t-a-center">
-            Прокатная компания СуперАвто
-          </h1>
-          <h2 class="main-section__subtitle t-a-center">Наш автопарк</h2>
-          <div class="main-section__wrapper">
-            <div class="main-section__item">
-              <a class="main-section__link" href="./pages/spyders.html"
-                ><img
-                  class="main-section__img"
-                  src="./img/convertible.jpg"
-                  alt="Кабриолеты"
-                />
-                <h3 class="main-section__description">Кабриолеты</h3></a
-              >
-            </div>
-            <div class="main-section__item">
-              <a class="main-section__link" href="./pages/sedans.html"
-                ><img
-                  class="main-section__img"
-                  src="./img/sedan.jpg"
-                  alt="Седаны"
-                />
-                <h3 class="main-section__description">Седаны</h3></a
-              >
-            </div>
-            <div class="main-section__item">
-              <a class="main-section__link" href="./pages/crossovers.html"
-                ><img
-                  class="main-section__img"
-                  src="./img/crossover.jpg"
-                  alt="Кроссоверы"
-                />
-                <h3 class="main-section__description">Кроссоверы</h3></a
-              >
-            </div>
-            <div class="main-section__item">
-              <a class="main-section__link" href="./pages/limousines.html"
-                ><img
-                  class="main-section__img"
-                  src="./img/limouzin.jpg"
-                  alt="Лимузины"
-                />
-                <h3 class="main-section__description">Лимузины</h3></a
-              >
-            </div>
-            <div class="main-section__item">
-              <a href="./pages/minivans.html" class="main-section__link"
-                ><img
-                  class="main-section__img"
-                  src="./img/minivan.jpg"
-                  alt="Минивены"
-                />
-                <h3 class="main-section__description">Минивены</h3></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="our-discount--scroll" class="cards">
-        <div class="container">
-          <h3 class="cards__title">Наши скидки</h3>
-          <div class="card__wrapper">
-            <div class="card">
-              <img src="./img/mercedesW223.jpg" alt="Mercedes S-класс AMG" />
-              <div class="card__description">
-                <h3 class="card__subtitle">Mercedes S-класс AMG</h3>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <span>Год выпуска</span>
-                    <span>2023</span>
-                  </li>
-                  <li class="card__item">
-                    <span>Объём мотора</span>
-                    <span>4.0 л.</span>
-                  </li>
-                  <li class="card__item">
-                    <span>Мощность</span>
-                    <span>820 л.с.</span>
-                  </li>
-                </ul>
-                <div class="card__price-wrapper">
-                  <div class="card__price card__price-old">
-                    от <span>125 000 ₽/сутки</span>
-                  </div>
-                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
-                </div>
-                <button class="card__order">Заказать</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./img/Rolls-Royce-Dawn.jpg" alt="Rolls-royce Dawn" />
-              <div class="card__description">
-                <h3 class="card__subtitle">Rolls-royce Dawn</h3>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <span>Год выпуска</span>
-                    <span>2023</span>
-                  </li>
-                  <li class="card__item">
-                    <span>Объём мотора</span>
-                    <span>4.4 л.</span>
-                  </li>
-                  <li class="card__item">
-                    <span>Мощность</span>
-                    <span>625 л.с.</span>
-                  </li>
-                </ul>
-                <div class="card__price-wrapper">
-                  <div class="card__price card__price-old">
-                    от <span>125 000 ₽/сутки</span>
-                  </div>
-                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
-                </div>
-                <button class="card__order">Заказать</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./img/McLaren-765Lt.jpg" alt="McLaren-765Lt" />
-              <div class="card__description">
-                <h3 class="card__subtitle">McLaren 765Lt</h3>
-                <ul class="card__list">
-                  <li class="card__item">
-                    <span>Год выпуска</span>
-                    <span>2023</span>
-                  </li>
-                  <li class="card__item">
-                    <span>Объём мотора</span>
-                    <span>4.4 л.</span>
-                  </li>
-                  <li class="card__item">
-                    <span>Мощность</span>
-                    <span>625 л.с.</span>
-                  </li>
-                </ul>
-                <div class="card__price-wrapper">
-                  <div class="card__price card__price-old">
-                    от <span>125 000 ₽/сутки</span>
-                  </div>
-                  <div class="card__price">от <span>20 000 ₽/сутки</span></div>
-                </div>
-                <button class="card__order">Заказать</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="about-company--scroll" class="about-company">
-        <div class="container">
-          <h2 class="about-company__title t-a-center">О компании</h2>
-          <div class="about-company__wrap">
-            <img
-              class="about-company__left"
-              src="./img/process.jpg"
-              alt="Процесс компании"
-            />
-            <div class="about-company__right">
-              <h3 class="about-company__right-subtitle">Процесс</h3>
-              <p class="about-company__description">
-                Откройте для себя легкость и уверенность в путешествиях с нашей
-                арендой автомобилей. Мы предоставляем современные транспортные
-                средства с передовыми технологиями, обеспечивая комфорт и
-                беззаботность в каждой поездке.
-              </p>
-              <p class="about-company__description">
-                От выбора автомобиля до возврата после аренды — каждый этап
-                контролируется для вашего удобства. Прозрачные условия,
-                доступные цены и высший уровень обслуживания делают нашу
-                компанию идеальным выбором для незабываемых путешествий.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="menu">
-          <div class="menu__wrapper">
-            <a href="index.html" class="menu__logo">
-              <img class="menu__logo" src="./img/logo.png" alt="Логотип" />
-            </a>
-            <div class="menu__phone">
-              <a href="tel:+74862507736" class="menu__phone-number"
-                >+7 (4862) 50-77-36
-              </a>
-              <a href="" class="menu__phone-text">Обратный звонок</a>
-            </div>
-            <div class="menu__contacts">
-              <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
-              <a href="./pages/contacts.html" class="menu__map"
-                >Показать на карте</a
-              >
-            </div>
-            <div class="menu__clock-work">
-              Режим работы: <br />
-              Пн-пт: с 8:00 до 17:30
-            </div>
-            <div class="menu__inner">
-              <div class="menu__phone">
-                <a href="tel:+74862507736" class="menu__phone-number"
-                  >+7 (4862) 50-77-36
-                </a>
-                <a href="#" class="menu__phone-text">Обратный звонок</a>
-              </div>
-              <div class="menu__contacts">
-                <div class="menu__place">г. Воронеж, ул. Хользунова 43</div>
-                <a href="./pages/contacts.html" class="menu__map"
-                  >Показать на карте</a
-                >
-              </div>
-              <div class="menu__clock-work">
-                Режим работы: <br />
-                Пн-пт: с 8:00 до 17:30
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script src="./scripts/form.js"></script>
     <script src="./scripts/burger.js"></script>
     <script src="./scripts/scrollHandler.js"></script>
