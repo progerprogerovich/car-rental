@@ -1,0 +1,58 @@
+/* Страница Услуги */
+
+.prices {
+  padding: 25px 25px 0px 25px;
+  .breadcrumb {
+    padding: 0 0px;
+  }
+  h1 {
+    text-align: center;
+    padding-bottom: 25px;
+    font-family: $font-museo700;
+  }
+  table {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    color: #2e2e2e;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    width: 100%;
+    tr {
+      -webkit-text-size-adjust: 100%;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1;
+      color: #2e2e2e;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      border-bottom: 1px solid #7f7f7f;
+    }
+    th {
+      -webkit-text-size-adjust: 100%;
+      line-height: 1;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      font-family: "Intro Bold Caps", sans-serif;
+      font-size: 13px;
+      color: #fff;
+      background-color: #015f6a;
+      font-weight: 400;
+      text-align: left;
+      padding: 12px;
+    }
+    td {
+      -webkit-text-size-adjust: 100%;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      color: #2e2e2e;
+      line-height: 1.667;
+      padding: 16px 12px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.nav {
+  background-color: #ffa500;
+  height: 57px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 57px;
+  }
+
+  &__link {
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    &:hover {
+      color: #000;
+    }
+  }
+}

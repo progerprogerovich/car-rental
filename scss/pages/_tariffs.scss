@@ -1,0 +1,13 @@
+/* Страница Тарифы */
+.tariffs {
+  padding-top: 25px;
+  h1 {
+    text-align: center;
+    font-family: $font-museo700;
+    padding-bottom: 25px;
+  }
+  &__wrapper {
+    padding: 0 25px;
+    font-family: "Open Sans";
+  }
+}
