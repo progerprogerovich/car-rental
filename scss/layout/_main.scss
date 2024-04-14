@@ -1,9 +1,9 @@
 .main {
   flex-grow: 1;
-  background: url("./img/background-image.png");
+  background: url("../img/background-image.png");
   .carousel__inner {
     height: 519px;
-    background-image: url("./img/slider2.png");
+    background-image: url("../img/slider2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -42,7 +42,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 36px;
     }
     &__title {
       font-size: 48px;
@@ -60,6 +59,7 @@
       gap: 9px;
       padding: 0px 15px;
       margin-bottom: 30px;
+      max-width: 33.33333%;
     }
     &__link {
       display: flex;
